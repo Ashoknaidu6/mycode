@@ -8,19 +8,19 @@ public class HeapSort
 	{
 		int n = arr.length;
 
-		// Build heap (rearrange array)
+
 		for (int i = n / 2 - 1; i >= 0; i--)
 			heapify(arr, n, i);
 
-		// One by one extract an element from heap
+
 		for (int i=n-1; i>=0; i--)
 		{
-			// Move current root to end
+
 			int temp = arr[0];
 			arr[0] = arr[i];
 			arr[i] = temp;
 
-			// call max heapify on the reduced heap
+
 			heapify(arr, i, 0);
 		}
 	}
@@ -48,12 +48,12 @@ public class HeapSort
 			arr[i] = arr[largest];
 			arr[largest] = swap;
 
-			// Recursively heapify the affected sub-tree
+
 			heapify(arr, n, largest);
 		}
 	}
 
-	/* A utility function to print array of size n */
+
 	static void printArray(int arr[])
 	{
 		int n = arr.length;
@@ -62,7 +62,7 @@ public class HeapSort
 		System.out.println();
 	}
 
-	// Driver program
+
 	public static void main(String args[])
 	{
 		int arr[] = {12, 11, 13, 5, 6, 7};
